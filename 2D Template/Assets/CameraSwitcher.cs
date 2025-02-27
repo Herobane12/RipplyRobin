@@ -2,44 +2,27 @@ using UnityEngine;
 
 public class CameraSwitcher : MonoBehaviour
 {
-    public GameObject camObject1, camObject2;
-    bool cam = true;
-    bool cam2 = false;
-
-    public bool isActive;
+    public GameObject camObject1;
     public GameObject Button;
+   public MoveCamera moveCamera;
+
+    bool cam = true;
 
     void Start()
     {
-        bool cam = true;
-        bool cam2 = false;
+
     }
 
-    public void Activate()
+    public void StartGame()
     {
-        Button.SetActive(true);
-        isActive = true;
-    }
-
-    public void DeActivate()
-    {
-        Button.SetActive(false);
-        isActive = false;
-    }
-
-
-    void SwapCamera()
-    {
-        
-        
-            bool cam = false;
-            bool cam2 = true;
-        
-    }
-
-    private void Update()
-    {
+        moveCamera.MovingCamera();
+        //Button.SetActive(false);
+        moveCamera.isActive = true;
         camObject1.SetActive(cam);
-        camObject2.SetActive(cam2);
-    }
+    }   
+
+
+
+
+
 }
