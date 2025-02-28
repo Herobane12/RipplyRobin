@@ -22,17 +22,15 @@ public class MoveCamera : MonoBehaviour
 
         if (moved)
         {
-            while (Vector2.Distance(transform.position, gameScene.transform.position) > 0)
+            if (Vector2.Distance(transform.position, gameScene.transform.position) > 0)
             {
                 transform.position = Vector2.MoveTowards(transform.position, gameScene.transform.position, speed * Time.deltaTime);
-
             }
-            while (Vector2.Distance(gameScene.transform.position, transform.position) == 0)
+            else if (Vector2.Distance(gameScene.transform.position, transform.position) == 0)
             {
                 transform.position = gameScene.transform.position;
             }
-
-            moved = false;
+            //moved = false;
         }
 
 
@@ -52,11 +50,10 @@ public class MoveCamera : MonoBehaviour
 
     private void Update()
     {
-       
-
-        
-        
-        
+       if (moved == true)
+       {
+           MovingCamera();
+       }
     }
 }
 

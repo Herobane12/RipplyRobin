@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlapWings : MonoBehaviour
 {
-    [SerializeField] private float _velocity = 1.5f;
+    [SerializeField] private float _velocity = 2.2f;
     [SerializeField] private float _rotationSpeed = 2f;
     public KeyCode upArrow;
 

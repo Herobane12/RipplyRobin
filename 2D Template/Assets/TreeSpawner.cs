@@ -5,7 +5,8 @@ public class TreeSpawner : MonoBehaviour
     [SerializeField] private float _maxTime = 1.5f;
     [SerializeField] private float _heightRange = 0.45f;
     [SerializeField] private GameObject _Tree;
-
+    public float treeSpeed;
+    public float maxTimeDecrease;
     private float _timer;
 
     private void Start()

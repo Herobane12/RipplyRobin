@@ -4,6 +4,7 @@ public class CameraSwitcher : MonoBehaviour
 {
     public GameObject camObject1;
     public GameObject Button;
+    public GameObject title;
    public MoveCamera moveCamera;
 
     bool cam = true;
@@ -16,9 +17,10 @@ public class CameraSwitcher : MonoBehaviour
     public void StartGame()
     {
         moveCamera.MovingCamera();
-        //Button.SetActive(false);
         moveCamera.isActive = true;
         camObject1.SetActive(cam);
+        Button.SetActive(false);
+        title.SetActive(false);
     }   
 
 
