@@ -5,14 +5,9 @@ public class CameraSwitcher : MonoBehaviour
     public GameObject camObject1;
     public GameObject Button;
     public GameObject title;
-   public MoveCamera moveCamera;
+    public MoveCamera moveCamera;
 
     bool cam = true;
-
-    void Start()
-    {
-
-    }
 
     public void StartGame()
     {

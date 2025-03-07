@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class MoveTree : MonoBehaviour
 {
-    [SerializeField] private float _speed = 0.6f;
+    [SerializeField] private float _speed = 0.8f;
 
     public void Start()
     {

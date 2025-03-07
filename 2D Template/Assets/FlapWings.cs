@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlapWings : MonoBehaviour
 {
-    
+    private const double T = 0.5;
     [SerializeField] private float _velocity = 2.2f;
     [SerializeField] private float _rotationSpeed = 2f;
     public KeyCode upArrow;
@@ -14,7 +14,7 @@ public class FlapWings : MonoBehaviour
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
-     
+        _rb.gravityScale = (float)T;
     }
 
     private void Update()
